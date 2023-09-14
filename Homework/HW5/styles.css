@@ -1,0 +1,32 @@
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Sets body colors */
+body {
+    background-color: #f7ffff;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+header, footer {
+    background-color: #ddf0f0;
+}
+
+/* Sets text attributes */
+a {
+    text-decoration: underline dotted;
+}
+
+h1 {
+    font-size: 250%;
+}
+
+/* Set other attributes */
+img {
+    border: 10px solid #cdd;
+}
+
+.center-aligned {
+    text-align:center;
+}
