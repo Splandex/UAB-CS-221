@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+  <body>
+    <header class = "center-aligned">
+        <h1>Alex Angle Portfolio</h1>
+    </header>
+
+    <navbar class="center-aligned" id="navbar">
+        <a class="navbar-link" href="#about-me">About Me</a>
+        <a class="navbar-link" href="#my-work">My Work</a>
+        <a class="navbar-link" href="#contact-info">Contact Info</a>
+    </navbar>
+
+    <label class="hamburger-menu">
+      <input type="checkbox">
+    </label>
+    <aside class="sidebar">
+      <nav>
+        <a class="hamburger-link" href="#about-me">About Me</a><br>
+        <a class="hamburger-link" href="#my-work">My Work</a><br>
+        <a class="hamburger-link" href="#contact-info">Contact Info</a>
+      </nav>
+     
+    </aside>
+    <br><br>
+
+    <!-- About me section -->
+    <main>
+      <section id="about-me">
+        <div>
+          <h2>About Me</h2>
+          <p>I am a senior at UAB majoring in Computer Science with a minor in marketing. I have several skills applicable to computer science including:</p>
+          <ul>
+            <li>Experience in python, java, html, css, C, and lua</li>
+            <li>Experience working with 3d engines</li>
+            <li>Strong team skills</li>
+          </ul>
+        </div>
+        
+        <img 
+        srcset="https://www.cnet.com/a/img/resize/82b7835c7581c32586cc7a158ab47577801e9ca0/hub/2011/05/11/e011f6e4-6788-11e3-846b-14feb5ca9861/34662721_PALM.png?auto=webp&width=1200 500w, https://www.lego.com/cdn/cs/catalog/assets/blt7d1ac53c0797a58e/1/70831_Emmet_Mugshot_HighQuality.png 800w"
+        src="https://www.lego.com/cdn/cs/catalog/assets/blt7d1ac53c0797a58e/1/70831_Emmet_Mugshot_HighQuality.png">
+      </section>
+
+      <!-- My work section -->
+      <section id = "my-work">
+        <div>
+          <h2>My Work</h2>
+          <ul>
+            <li>C csv reader - <a href="https://github.com/Splandex/CS332_HW1">link here</a></li>
+            <li>Bookstore website using flask - <a href="https://github.com/Splandex/CS421GroupProject">link here</a></li>
+          </ul>
+        </div>
+        
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/%D0%9F%D1%80%D0%B8%D0%BC%D0%B5%D1%80_%D0%BA%D0%BE%D0%B4%D0%B0_%D0%BD%D0%B0_CSS.jpg/300px-%D0%9F%D1%80%D0%B8%D0%BC%D0%B5%D1%80_%D0%BA%D0%BE%D0%B4%D0%B0_%D0%BD%D0%B0_CSS.jpg">
+    </section>
+
+    <!-- Contact Info section -->
+    <section id="contact-info">
+      <div>
+        <h2>Contact Info</h2>
+        <p>Best methods to reach me (not my actual contact info since this is public obviously):</p>
+        <ul>
+          <li>Phone number: 205-323-1221</li>
+          <li><a href="mailto:CanadaLegal@yum.com">Send email</a></li>
+        </ul>
+      </div>
+      
+      <img src="data:image/jpeg;base64,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">
+    </section>
+    </main>
+    
+
+  <br><br>
+  <footer class = "center-aligned">
+    <p>This portfolio is open source</p>
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,250 @@
+:root {
+    --bar-width: 60px;
+    --bar-height:8px;
+    --hamburger-height:6px;
+    --hamburger-gap:6px;
+    --animation-timing: 200ms ease-in-out;
+    --animate-color: #555;
+}
+
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Sets body colors */
+body {
+    background-color: #faffff;
+    margin:0;
+}
+
+main {
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+    flex: 10%;
+    justify-content: space-between;
+    gap: 15%;
+    align-items: center;
+}
+
+header {
+    background-color: #ddf0f0;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    font-size: 135%;
+}
+
+footer {
+    background-color: #ddf0f0;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+/* Sets text attributes */
+a {
+    color: #666;
+    text-decoration:none;
+}
+a:hover:not(.navbar-link) {
+    text-decoration: underline dotted;
+}
+
+
+h1 {
+    font-size: 250%;
+}
+
+#navbar {
+    display: flex;
+    flex-direction: row;
+    flex: 10%;
+    justify-content: center;
+    gap: 5%;
+    background-color: #d5e8e8;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.navbar-link {
+    font-size: large;
+    color:#333;
+    text-decoration: none;
+}
+
+.navbar-link:hover {
+    border-bottom: solid 3px rgb(110, 121, 121);
+}
+
+/* Set other attributes */
+img {
+    border: 10px solid #cdd;
+    max-width: 15%;
+    margin: 2%;
+    max-height:8em;
+}
+
+.center-aligned {
+    text-align:center;
+}
+
+
+/* Creates 3 bars */
+.hamburger-menu::before ,
+.hamburger-menu::after ,
+.hamburger-menu input{
+    content: "";
+    width: var(--bar-width);
+    height: var(--bar-height);
+    background-color: #333;
+    border-radius: 9999px;
+    transition: opacity var(--animation-timing), background-color var(--animation-timing);
+    transform-origin: center;
+}
+
+/* Hamburger menu properties */
+.hamburger-menu{
+    display: flex;
+    flex-direction: column;
+    gap: var(--hamburger-gap);
+    z-index: 2;
+    cursor: pointer;
+    background-color: #d5e8e8;
+    visibility: hidden;
+    position: absolute;
+    padding: 2%;
+}
+
+
+/* Affects the original checkbox by getting rid of it */
+.hamburger-menu input{
+    appearance: none;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    pointer-events: none;
+}
+
+/* Changes color when clicked */
+.hamburger-menu:has(input:checked)::before{
+    background-color: var(--animate-color);
+}
+
+.hamburger-menu:has(input:checked)::after{
+    background-color: var(--animate-color);
+}
+
+.hamburger-menu input:checked{
+    background-color: var(--animate-color); 
+}
+
+.sidebar {
+    transition: translate var(--animation-timing);
+    translate: -100%;
+    background-color: #d5e8e8;
+    padding-left: 2%;
+    visibility: hidden;
+    position: absolute;
+}
+
+.hamburger-menu:has(input:checked) + .sidebar{
+    translate: 0;
+}
+
+.hamburger-link {
+    color: #000;
+    font-size: large;
+}
+
+.hamburger-link:hover {
+    border-bottom: solid 3px rgb(110, 121, 121);
+}
+
+
+
+
+
+/* Small screens */
+@media (max-width: 480px) {
+    header {
+        font-size: 60%;
+    }
+    main {
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+    img {
+        border: 5px solid #cdd;
+        max-width: 15%;
+        margin: 2%;
+        max-height:6em;
+    }
+    section {
+        gap: 2%;
+    }
+    .hamburger-menu {
+        visibility: visible;
+        position: relative;
+    }
+    .sidebar {
+        visibility: visible;
+        position: relative;
+    }
+    #navbar {
+        position: absolute;
+        visibility: hidden;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    header {
+        font-size: 80%;
+    }
+    main {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    img {
+        border: 5px solid #cdd;
+        max-width: 15%;
+        margin: 2%;
+        max-height:6em;
+    }
+    section {
+        gap: 2%;
+    }
+    .hamburger-menu {
+        visibility: visible;
+        position: relative;
+    }
+    .sidebar {
+        visibility: visible;
+        position: relative;
+    }
+    #navbar {
+        visibility: hidden;
+        position: absolute;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    header {
+        font-size: 100%;
+    }
+    main {
+        padding-left: 13%;
+        padding-right: 13%;
+    }
+    img {
+        border: 7px solid #cdd;
+        max-width: 15%;
+        margin: 2%;
+        max-height:6em;
+    }
+    section {
+        gap: 7%;
+    }
+}
