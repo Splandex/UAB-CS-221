@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JS Stuff</title>
+        <link rel="stylesheet" href="splandex.hw8.css">
+
+        <!-- JS Code -->
+        <script>
+            let input = prompt("Enter a grade:", "100");
+            
+            // Waits for the document to load so that it can reference the output element
+            setTimeout(function() {
+                let output = document.getElementById("output");
+                let numGrade = parseInt(input)
+                let outputText;
+
+                document.getElementById("output").textContent = "Should work"
+                // Switch Case
+                switch (true) {
+                    case (numGrade >= 90):
+                        outputText = input + " | A | Candy"
+                        break;
+                    case (numGrade >= 80):
+                        outputText = input + " | B | Apple"
+                        break;
+                    case (numGrade >= 70):
+                        outputText = input + " | C | Mint"
+                        break;
+                    case (numGrade >= 60):
+                        outputText = input + " | D | Pencil"
+                        break;
+                    default:
+                        outputText = input + " | F | Awkward conversation with parents"
+                }
+
+                output.textContent = outputText;
+                console.log(outputText)
+            }, 100)
+        </script>
+    </head>
+
+    <body>
+        <h1>Candy</h1>
+
+        <p id="output">Loading results...</p>
+    </body>
+</html>
